@@ -7,7 +7,7 @@ interface MenuItemProps {
 export const MenuItem: React.FC<MenuItemProps> = ({ label }) => {
   return (
     <li className='mx-3 text-1xl max-sm:py-2'>
-      <a href="" className=''>{ label }</a>
+      <a href="" className='hover:text-white transition duration-500'>{ label }</a>
     </li>
   )
 }
