@@ -1,7 +1,9 @@
 import api from "@/services/api";
 import { useEffect, useState } from "react";
+import PortfolioItem from "./PortfolioItem/PortfolioItem";
+import PortfolioTitle from "./PortfolioTitle";
 
-interface Project {
+export interface Project {
   id: string;
   name: string;
   description: string;
@@ -30,17 +32,15 @@ export default function Portfolio() {
   }, [])
 
   return(
-    <div>
-      <h2>Projects</h2>
-      <ul>
+    <div className="text-white px-5">
+      <PortfolioTitle />
+      <div className="flex">
         {projects.map(project => {
           return(
-            <li key={ project.id }>
-              { project.name }
-            </li>
+            <PortfolioItem project={ project } key={ project.id }/>
           )
         })}
-      </ul>
+      </div>
     </div>
   );
 }
