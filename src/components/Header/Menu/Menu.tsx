@@ -8,7 +8,7 @@ export const Menu: React.FC = () => {
         <MenuItem label="Home" to="/"/>
         <MenuItem label="Back-end skills" to=""/>
         <MenuItem label="Front-end skills" to=""/>
-        <MenuItem label="Portfolio" to="projects"/>
+        <MenuItem label="Projects" to="projects"/>
         <MenuItem label="Contact" to=""/>
       </ul>
     </nav>
