@@ -5,7 +5,7 @@ import { HeaderLogo } from "@/components/Header/HeaderLogo"
 
 export const Header: React.FC = () => {
   return (
-    <div className='flex p-5 max-sm:flex-col max-sm:items-center'>
+    <div className='flex w-screen p-5 max-sm:flex-col max-md:flex-col max-sm:items-center'>
       <HeaderLogo />
       <Menu />
     </div>

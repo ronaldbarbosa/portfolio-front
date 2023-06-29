@@ -25,7 +25,7 @@ export default function Portfolio() {
   // }, []);
 
   useEffect(() => {
-    fetch('http://localhost:5152/api/Project')
+    fetch('https://portfolio-ronald.azurewebsites.net/api/Project')
       .then(response => response.json())
       .then(data => setProjects(data))
       .catch(error => console.log('Ocorred an error: ', error))
