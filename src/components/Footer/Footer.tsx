@@ -3,7 +3,7 @@ import Social from "./Social/Social";
 
 export default function Footer() {
   return(
-    <div className="flex max-md:flex-col max-md:items-center px-10 py-5 justify-between text-grey border">
+    <div className="flex max-md:flex-col max-md:items-center px-10 py-5 justify-between text-grey">
       <Social />
       <CopyInfo />
     </div>
