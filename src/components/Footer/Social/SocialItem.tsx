@@ -9,11 +9,11 @@ interface SocialItemProps {
 export default function SocialItem(props: SocialItemProps) {
   if (props.icon == 'AiFillGithub')
     return (
-      <a href={props.link} target="_blank" className="px-3 text-4xl hover:text-green"><AiFillGithub /></a>
+      <a href={props.link} target="_blank" className="px-3 text-5xl hover:text-green"><AiFillGithub /></a>
     );
   else if (props.icon == 'AiFillLinkedin')
     return (
-      <a href={props.link} target="_blank" className="px-3 text-4xl hover:text-green"><AiFillLinkedin /></a>
+      <a href={props.link} target="_blank" className="px-3 text-5xl hover:text-green"><AiFillLinkedin /></a>
     );
   else
     return (
