@@ -6,9 +6,9 @@ interface PortfolioItemProps {
 
 export default function PortfolioItem(props: PortfolioItemProps) {
   return(
-    <div className="flex w-1/3 flex-col items-center mx-2 my-4 p-2 border-4 border-double border-green rounded-md font-black">
-      <div className="flex h-20 items-center justify-center">
-        <h3 className="text-2xl">{ props.project.name }</h3>
+    <div className="flex w-1/3 max-lg:w-full flex-col items-center mx-2 my-4 p-2 border-4 border-double border-green rounded-md font-black">
+      <div className="flex h-20 mb-2 items-center justify-center">
+        <h3 className="text-2xl text-center">{ props.project.name }</h3>
       </div>
       <img src={ props.project.image } alt={ props.project.name } className="w-full border rounded-lg text-black" />
       <div className="flex w-full justify-around mt-3">
