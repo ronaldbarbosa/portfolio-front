@@ -34,7 +34,7 @@ export default function Portfolio() {
   return(
     <div className="text-white px-5">
       <PortfolioTitle />
-      <div className="flex">
+      <div className="flex flex-wrap justify-around">
         {projects.map(project => {
           return(
             <PortfolioItem project={ project } key={ project.id }/>
