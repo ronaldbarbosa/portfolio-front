@@ -10,7 +10,7 @@ export default function PortfolioItem(props: PortfolioItemProps) {
       <div className="flex h-20 mb-2 items-center justify-center">
         <h3 className="text-2xl text-center">{ props.project.name }</h3>
       </div>
-      <img src={ props.project.image } alt={ props.project.name } className="w-full border rounded-lg text-black" />
+      <img src={ props.project.image } alt={ props.project.name } className="w-full border rounded-lg text-black brightness-75 hover:brightness-100 max-lg:brightness-100" />
       <div className="flex w-full justify-around mt-3">
         { props.project.frontend && (
           <div className="w-1/2 text-center">
