@@ -3,11 +3,12 @@ import { fetchProjectById } from "@/services/api";
 
 import Footer from "@/components/Footer/Footer";
 import { Header } from "@/components/Header/Header";
-import Portfolio from "@/components/Portfolio/Portfolio";
+import ProjectInfo from "@/components/ProjectInfo/ProjectInfo";
 
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+
 
 export default function ProjectDetails(){
   const router = useRouter();
@@ -36,6 +37,7 @@ export default function ProjectDetails(){
         <title>{ project.name }</title>
       </Head>
       <Header />
+      <ProjectInfo project={ project } />
       <Footer />
     </div>
   )
