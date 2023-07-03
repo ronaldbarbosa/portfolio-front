@@ -1,5 +1,6 @@
-import api from "@/services/api";
 import { useEffect, useState } from "react";
+
+import { fetchProjects as getProjects } from "@/services/api";
 import PortfolioItem from "./PortfolioItem/PortfolioItem";
 import PortfolioTitle from "./PortfolioTitle";
 
@@ -19,17 +20,24 @@ export default function Portfolio() {
   const [projects, setProjects] = useState<Project[]>([]);
 
   // useEffect(() => {
-  //   api.get('').then((response) => setProjects(response.data)).catch((err) => {
-  //     console.error('Ocorreu um erro: ', err);
-  //   })
-  // }, []);
+  //   fetch('https://portfolio-ronald.azurewebsites.net/api/Project')
+  //     .then(response => response.json())
+  //     .then(data => setProjects(data))
+  //     .catch(error => console.log('Ocorred an error: ', error))
+  // }, [])
 
   useEffect(() => {
-    fetch('https://portfolio-ronald.azurewebsites.net/api/Project')
-      .then(response => response.json())
-      .then(data => setProjects(data))
-      .catch(error => console.log('Ocorred an error: ', error))
-  }, [])
+    const fetchProjects = async () => {
+      try {
+        const data = await getProjects();
+        setProjects(data);
+      } catch (error) {
+        console.error("Error: ", error);
+      }
+    };
+
+    fetchProjects();
+  }, []);
 
   return(
     <div className="text-white px-5">

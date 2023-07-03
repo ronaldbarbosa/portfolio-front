@@ -5,7 +5,7 @@ import { Header } from "@/components/Header/Header";
 import Portfolio from "@/components/Portfolio/Portfolio";
 
 export default function Projects() {
-  return(
+  return (
     <div className="min-h-screen flex flex-col justify-between">
       <Head>
         <title>Projects</title>

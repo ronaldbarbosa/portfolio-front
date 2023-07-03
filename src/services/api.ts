@@ -1,9 +1,15 @@
-import axios from 'axios';
+const baseUrl = "https://portfolio-ronald.azurewebsites.net/api/";
 
-const API_URL = 'http://localhost:5152/api/Project';
+export async function fetchProjects() {
+  const url = `${baseUrl}/Project`;
+  const response = await fetch(url);
+  const data = response.json();
+  return data;
+}
 
-const api = axios.create({
-  baseURL: API_URL
-});
-
-export default api;
+export async function fetchProjectById(id: string | string[] | undefined) {
+  const url = `${baseUrl}/Project/${id}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+}
