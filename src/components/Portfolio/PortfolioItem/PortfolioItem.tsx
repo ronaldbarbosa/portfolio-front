@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Project } from "../Portfolio";
 import { AiOutlineInfoCircle} from "react-icons/ai";
 
@@ -29,7 +30,7 @@ export default function PortfolioItem(props: PortfolioItemProps) {
         }
       </div>
       <div className="text-3xl my-3">
-        <button className="flex flex-col items-center"><span className="p-2 text-lg uppercase">More</span><AiOutlineInfoCircle /></button>
+        <Link className="flex flex-col items-center" href={`/projects/${ props.project.id }`}><span className="p-2 text-lg uppercase">More</span><AiOutlineInfoCircle /></Link>
       </div>
     </div>
   );
