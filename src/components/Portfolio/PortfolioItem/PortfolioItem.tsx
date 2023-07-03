@@ -1,4 +1,5 @@
 import { Project } from "../Portfolio";
+import { AiOutlineInfoCircle} from "react-icons/ai";
 
 interface PortfolioItemProps {
   project: Project
@@ -26,6 +27,9 @@ export default function PortfolioItem(props: PortfolioItemProps) {
           </div>
         )
         }
+      </div>
+      <div className="text-3xl my-3">
+        <button className="flex flex-col items-center"><span className="p-2 text-lg uppercase">More</span><AiOutlineInfoCircle /></button>
       </div>
     </div>
   );
