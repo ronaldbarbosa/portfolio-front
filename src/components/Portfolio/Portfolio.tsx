@@ -10,8 +10,9 @@ export interface Project {
   description: string;
   frontend: string;
   backend: string;
-  devOps: string;
+  tools: string;
   url: string;
+  code: string;
   image: string;
   finished: boolean
 }
