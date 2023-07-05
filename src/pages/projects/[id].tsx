@@ -29,9 +29,18 @@ export default function ProjectDetails(){
     setTimeout(() => fetchProjectDetails(), 5000);
   }, [id]);
 
-
-  if (!project) return <LoadingPage info="project info" />
-
+  if (!project) {
+    return (
+      <div className="min-h-screen flex flex-col justify-between">
+        <Head>
+          <title>Loading..</title>
+        </Head>
+        <Header />
+        <LoadingPage info="project info" />
+        <Footer />
+      </div>
+    )
+  }
   return (
     <div className="min-h-screen flex flex-col justify-between">
       <Head>
