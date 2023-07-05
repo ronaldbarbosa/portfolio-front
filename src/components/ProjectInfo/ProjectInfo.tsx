@@ -9,6 +9,8 @@ interface ProjectProps {
 }
 
 export default function ProjectInfo(props: ProjectProps) {
+
+
   return (
     <div className="flex flex-col items-center text-white">
       <div className="w-3/5 max-xl:w-5/6 max-sm:w-11/12 mb-5">

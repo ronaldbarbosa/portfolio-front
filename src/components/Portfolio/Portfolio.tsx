@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 
 import { fetchProjects as getProjects } from "@/services/api";
+
 import PortfolioItem from "./PortfolioItem/PortfolioItem";
 import PortfolioTitle from "./PortfolioTitle";
+import LoadingPage from "../LoadingPage";
 
 export interface Project {
   id: string;
@@ -37,8 +39,10 @@ export default function Portfolio() {
       }
     };
 
-    fetchProjects();
+    setTimeout(() => fetchProjects(), 5000);
   }, []);
+
+  if (projects.length === 0) return <LoadingPage info="project list" />
 
   return(
     <div className="text-white px-5">

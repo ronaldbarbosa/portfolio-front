@@ -1,13 +1,14 @@
-import { Project } from "@/components/Portfolio/Portfolio";
-import { fetchProjectById } from "@/services/api";
-
-import Footer from "@/components/Footer/Footer";
-import { Header } from "@/components/Header/Header";
-import ProjectInfo from "@/components/ProjectInfo/ProjectInfo";
-
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+
+import { fetchProjectById } from "@/services/api";
+
+import { Project } from "@/components/Portfolio/Portfolio";
+import Footer from "@/components/Footer/Footer";
+import { Header } from "@/components/Header/Header";
+import ProjectInfo from "@/components/ProjectInfo/ProjectInfo";
+import LoadingPage from "@/components/LoadingPage";
 
 
 export default function ProjectDetails(){
@@ -25,11 +26,11 @@ export default function ProjectDetails(){
       }
     };
 
-    fetchProjectDetails();
+    setTimeout(() => fetchProjectDetails(), 5000);
   }, [id]);
 
 
-  if (!project) return <div>Loading...</div>
+  if (!project) return <LoadingPage info="project info" />
 
   return (
     <div className="min-h-screen flex flex-col justify-between">
