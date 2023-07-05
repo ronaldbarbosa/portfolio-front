@@ -12,7 +12,7 @@ export const Menu: React.FC = () => {
       <ul className='flex max-sm:hidden items-center text-grey'>
         <MenuItem label="Home" to="/"/>
         <MenuItem label="Projects" to="/projects"/>
-        <MenuItem label="Contact" to=""/>
+        <MenuItem label="Contact" to="/contact"/>
       </ul>
       <button className="hidden max-sm:flex w-full justify-center text-3xl text-green" onClick={ () => setOpen(!open) }>
         { open == true ? <RxCross2 /> :  <SlArrowDown /> }
@@ -23,7 +23,7 @@ export const Menu: React.FC = () => {
           <ul className='flex text-grey flex-col w-full mt-3 items-center'>
             <MenuItem label="Home" to="/"/>
             <MenuItem label="Projects" to="/projects"/>
-            <MenuItem label="Contact" to=""/>
+            <MenuItem label="Contact" to="/contact"/>
           </ul>
         ) : null
       }
