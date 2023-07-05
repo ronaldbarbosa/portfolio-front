@@ -26,7 +26,7 @@ export default function ProjectDetails(){
       }
     };
 
-    setTimeout(() => fetchProjectDetails(), 5000);
+    fetchProjectDetails();
   }, [id]);
 
   if (!project) {

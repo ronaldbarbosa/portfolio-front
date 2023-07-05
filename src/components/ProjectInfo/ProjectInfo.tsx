@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BiCloudUpload, BiCodeAlt } from "react-icons/bi";
+import { RiArrowLeftCircleLine } from "react-icons/ri"
 
 import { Project } from "../Portfolio/Portfolio";
 import InfoRow from "./InfoRow";
@@ -47,8 +48,8 @@ export default function ProjectInfo(props: ProjectProps) {
         </Link>
       </div>
 
-      <div className="mt-10 bg-grey text-black rounded-md text-2xl hover:bg-green">
-        <Link href="/projects" className="p-5">Back</Link>
+      <div className="flex text-green text-6xl mt-5 justify-center">
+        <Link href="/projects" className="p-5"><RiArrowLeftCircleLine /></Link>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import Head from "next/head";
 import Footer from "@/components/Footer/Footer";
 import { Header } from "@/components/Header/Header";
 import Portfolio from "@/components/Portfolio/Portfolio";
+import BackToTop from "@/components/BackToTop";
 
 export default function Projects() {
   return (
@@ -12,6 +13,7 @@ export default function Projects() {
       </Head>
       <Header />
       <Portfolio />
+      <BackToTop />
       <Footer />
     </div>
   );

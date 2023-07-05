@@ -14,7 +14,7 @@ export default function LoadingPage(info: LoadingPageProps) {
       wrapperClass=""
       visible={true}
       ariaLabel='oval-loading'
-      secondaryColor="#4fa94d"
+      secondaryColor="#4B88A2"
       strokeWidth={2}
       strokeWidthSecondary={2}
     />

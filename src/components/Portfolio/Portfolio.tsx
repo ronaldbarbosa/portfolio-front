@@ -39,7 +39,7 @@ export default function Portfolio() {
       }
     };
 
-    setTimeout(() => fetchProjects(), 5000);
+    fetchProjects();
   }, []);
 
   if (projects.length === 0) return <LoadingPage info="project list" />
