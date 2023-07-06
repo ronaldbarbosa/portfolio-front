@@ -13,7 +13,6 @@ export default function Projects() {
       </Head>
       <Header />
       <Portfolio />
-      <BackToTop />
       <Footer />
     </div>
   );

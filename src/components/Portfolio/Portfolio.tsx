@@ -5,6 +5,7 @@ import { fetchProjects as getProjects } from "@/services/api";
 import PortfolioItem from "./PortfolioItem/PortfolioItem";
 import PortfolioTitle from "./PortfolioTitle";
 import LoadingPage from "../LoadingPage";
+import BackToTop from "../BackToTop";
 
 export interface Project {
   id: string;
@@ -45,15 +46,18 @@ export default function Portfolio() {
   if (projects.length === 0) return <LoadingPage info="project list" />
 
   return(
-    <div className="text-white px-5">
-      <PortfolioTitle />
-      <div className="flex flex-wrap justify-around">
-        {projects.map(project => {
-          return(
-            <PortfolioItem project={ project } key={ project.id }/>
-          )
-        })}
+    <>
+      <div className="text-white px-5">
+        <PortfolioTitle />
+        <div className="flex flex-wrap justify-around">
+          {projects.map(project => {
+            return(
+              <PortfolioItem project={ project } key={ project.id }/>
+            )
+          })}
+        </div>
       </div>
-    </div>
+      <BackToTop />
+    </>
   );
 }
