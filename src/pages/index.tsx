@@ -14,7 +14,7 @@ export interface PageProps {
 export async function getStaticProps(props: PageProps) {
   return {
     props: {
-      ...(await serverSideTranslations(props.locale, ['index']))
+      ...(await serverSideTranslations(props.locale, ['common', 'index', 'projects', 'contacts']))
     }
   }
 }

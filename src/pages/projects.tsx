@@ -1,9 +1,22 @@
 import Head from "next/head";
 
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
 import Footer from "@/components/Footer/Footer";
 import { Header } from "@/components/Header/Header";
 import Portfolio from "@/components/Portfolio/Portfolio";
-import BackToTop from "@/components/BackToTop";
+
+export interface PageProps {
+  locale: string
+}
+
+export async function getStaticProps(props: PageProps) {
+  return {
+    props: {
+      ...(await serverSideTranslations(props.locale, ['common', 'index', 'projects', 'contacts']))
+    }
+  }
+}
 
 export default function Projects() {
   return (
