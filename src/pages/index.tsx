@@ -27,7 +27,6 @@ export default function Home() {
       <Head>
         <title>Portfolio</title>
       </Head>
-      <h1 className="text-white">{ t('index:dev_title') }</h1>
       <Header />
       <About />
       <Footer />
