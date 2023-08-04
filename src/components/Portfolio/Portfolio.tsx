@@ -43,7 +43,7 @@ export default function Portfolio() {
     fetchProjects();
   }, []);
 
-  if (projects.length === 0) return <LoadingPage info="project list" />
+  if (projects.length === 0) return <LoadingPage info="Loading project list. The first request to server takes more time." />
 
   return(
     <>

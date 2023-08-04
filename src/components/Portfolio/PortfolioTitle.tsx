@@ -1,7 +1,7 @@
 export default function PortfolioTitle() {
   return(
-    <div className="flex font-black text-2xl">
-      <h2>Portfolio</h2>
+    <div className="flex font-black text-green text-2xl justify-center my-2">
+      <h2>Projects</h2>
     </div>
   );
 }
