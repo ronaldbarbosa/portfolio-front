@@ -36,7 +36,7 @@ export default function ProjectDetails(){
           <title>Loading..</title>
         </Head>
         <Header />
-        <LoadingPage info="project info" />
+        <LoadingPage info="Loading project info" />
         <Footer />
       </div>
     )
