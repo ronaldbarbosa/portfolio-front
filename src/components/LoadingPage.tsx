@@ -18,7 +18,7 @@ export default function LoadingPage(info: LoadingPageProps) {
       strokeWidth={2}
       strokeWidthSecondary={2}
     />
-    <h5 className="text-xl text-white mt-5">{ info.info }</h5>
+    <h5 className="text-xl text-white mt-5 sm: text-center">{ info.info }</h5>
   </div>
   );
 }
