@@ -14,7 +14,7 @@ export default function PortfolioItem(props: PortfolioItemProps) {
       </div>
       <img src={ props.project?.imgUrl } alt={ props.project.name } className="w-full border rounded-lg text-black brightness-75 hover:brightness-100 max-lg:brightness-100" />
       <div className="flex w-full justify-around mt-3">
-        { props.project.projectType === ProjectType.Frontend && (
+        {/* { props.project.projectType === ProjectType.Frontend && (
           <div className="w-1/2 text-center">
             <h2 className="text-green">Frontend</h2>
           </div>
@@ -25,7 +25,7 @@ export default function PortfolioItem(props: PortfolioItemProps) {
             <h2 className="text-green">Backend</h2>
           </div>
         )
-        }
+        } */}
       </div>
       <div className="text-3xl my-3">
         <Link className="flex flex-col items-center" href={`/projects/${ props.project.id }`}><span className="p-2 text-lg uppercase">More</span><AiOutlineInfoCircle /></Link>

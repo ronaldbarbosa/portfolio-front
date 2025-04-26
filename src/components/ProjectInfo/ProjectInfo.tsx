@@ -23,13 +23,13 @@ export default function ProjectInfo(props: ProjectProps) {
 
       <img src={ props.project.imgUrl } alt={ `${props.project.name} screen capture` } className="w-3/5 max-xl:w-5/6 max-sm:w-11/12" />
 
-      { props.project.projectType === ProjectType.Frontend && (
+      {/* { props.project.projectType === ProjectType.Frontend && (
         <InfoRow projectInfoField="Frontend" projectInfoValue={ "props.project.frontend" } />
       )}
 
       { props.project.projectType === ProjectType.Backend && (
         <InfoRow projectInfoField="Backend" projectInfoValue={ "props.project.backend" } />
-      )}
+      )} */}
 
       {/* <InfoRow projectInfoField="Tools" projectInfoValue={ props.project.tools } />
 
