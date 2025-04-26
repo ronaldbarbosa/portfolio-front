@@ -11,13 +11,14 @@ export interface Project {
   id: string;
   name: string;
   description: string;
-  frontend: string;
-  backend: string;
-  tools: string;
-  url: string;
-  code: string;
-  image: string;
-  finished: boolean
+  deployUrl: string;
+  imgUrl: string;
+  projectType: Project
+}
+
+export enum ProjectType {
+  Frontend,
+  Backend
 }
 
 export default function Portfolio() {

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Project } from "../Portfolio";
+import { Project, ProjectType } from "../Portfolio";
 import { AiOutlineInfoCircle} from "react-icons/ai";
 
 interface PortfolioItemProps {
@@ -12,19 +12,17 @@ export default function PortfolioItem(props: PortfolioItemProps) {
       <div className="flex h-20 mb-2 items-center justify-center">
         <h3 className="text-2xl text-center">{ props.project.name }</h3>
       </div>
-      <img src={ props.project.image } alt={ props.project.name } className="w-full border rounded-lg text-black brightness-75 hover:brightness-100 max-lg:brightness-100" />
+      <img src={ props.project?.imgUrl } alt={ props.project.name } className="w-full border rounded-lg text-black brightness-75 hover:brightness-100 max-lg:brightness-100" />
       <div className="flex w-full justify-around mt-3">
-        { props.project.frontend && (
+        { props.project.projectType === ProjectType.Frontend && (
           <div className="w-1/2 text-center">
             <h2 className="text-green">Frontend</h2>
-            <h3>{ props.project.frontend }</h3>
           </div>
         )
         }
-        { props.project.backend && (
+        { props.project.projectType === ProjectType.Backend && (
           <div className="w-1/2 text-center">
             <h2 className="text-green">Backend</h2>
-            <h3>{ props.project.backend }</h3>
           </div>
         )
         }
